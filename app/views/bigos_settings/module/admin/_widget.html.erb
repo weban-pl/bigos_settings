@@ -1,0 +1,23 @@
+<ul class="accordion">
+  <% @im.each do |m| %>
+      <li>
+        <div class="title">
+          <h5><%= m.name %></h5>
+        </div>
+        <div class="content">
+          <% settings = BigosSettings::Settings.all(m.name) %>
+          <% settings.each do |setting| %>
+              <%= form_tag  '/bigos_settings/admin/settings', :remote => true do %>
+                  <% label = setting.first.to_s.clone %>
+                  <%= label_tag label.gsub "#{m.name}.", "" %>
+                  <%= text_field_tag "setting[#{setting.first}]", setting.second %>
+                  <%= submit_tag %>
+              <% end %>
+          <% end %>
+        </div>
+      </li>
+  <% end %>
+</ul>
+
+
+
