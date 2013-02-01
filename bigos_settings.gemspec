@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2.9"
   s.add_dependency "rails-settings-cached"
 
-  s.add_development_dependency "pg"
+  #s.add_development_dependency "pg"
 end
