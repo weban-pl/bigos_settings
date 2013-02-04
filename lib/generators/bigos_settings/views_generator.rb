@@ -28,7 +28,7 @@ module BigosSettings
       end
 
       def target_path
-        @target_path ||= "app/views/settings"
+        @target_path ||= "app/views/bigos_settings"
       end
     end
 

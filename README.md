@@ -25,3 +25,11 @@ In your view add (ERB):
 ```ruby
 <%= bigos_settings_admin_widget %>
 ```
+
+## Customization
+
+You can use to generate view you can overwrite
+```console
+rails generate bigos_settings:views
+```
+
