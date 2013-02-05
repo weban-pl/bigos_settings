@@ -22,6 +22,7 @@
       <h5>General Settings</h5>
     </div>
     <div class="content">
+      <% settings = BigosSettings::Settings.all("GS") %>
       <% settings.each do |setting| %>
           <%= form_tag  '/bigos_settings/admin/settings', :remote => true do %>
               <% label = setting.first.to_s.clone %>
