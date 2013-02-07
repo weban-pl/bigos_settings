@@ -1,6 +1,7 @@
 <ul class="accordion">
   <% @im.each do |m| %>
-      <li>
+    <% if BigosSettings::Settings.all(m.name).count > 0 %>
+        <li>
         <div class="title">
           <h5><%= m.name %></h5>
         </div>
@@ -16,6 +17,7 @@
           <% end %>
         </div>
       </li>
+    <% end %>
   <% end %>
   <li>
     <div class="title">
